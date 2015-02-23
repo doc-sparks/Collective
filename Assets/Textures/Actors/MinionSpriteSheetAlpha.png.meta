@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 9d9c35ac289676441b57d6138c531352
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: minionSpriteWalk_01
+    21300002: minionSpriteWalk_02
+    21300004: minionSpriteWalk_03
+    21300006: minionSpriteWalk_04
+    21300008: minionSpriteIdle_01
+    21300010: minionSpriteIdle_02
+    21300012: minionSpriteIdle_03
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: minionSpriteWalk_01
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1
+        width: 19
+        height: 44
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minionSpriteWalk_02
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1
+        width: 13
+        height: 44
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minionSpriteWalk_03
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1
+        width: 13
+        height: 44
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minionSpriteWalk_04
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1
+        width: 17
+        height: 44
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minionSpriteIdle_01
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 22
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minionSpriteIdle_02
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 23
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: minionSpriteIdle_03
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 24
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
