@@ -10,7 +10,7 @@ public class MinonKeyboardController : MonoBehaviour {
 	void Start () {
 	
 		// grab the Minion state engine
-		minionStateMachine_ = (MinionStateMachine) gameObject.GetComponent( typeof(MinionStateMachine) );
+		minionStateMachine_ = GetComponent<MinionStateMachine>();
 	}
 	
 	// Update is called once per frame
