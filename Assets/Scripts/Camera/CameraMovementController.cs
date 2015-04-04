@@ -31,7 +31,7 @@ public class CameraMovementController : MonoBehaviour
 								(Mathf.Abs ((target_position - transform.position).y) > trackingEpsilon_)) {
 
 								// move to current target position using linear interpolation
-								Debug.Log ("Camera Tracking object: " + targetObject_.name);
+								//Debug.Log ("Camera Tracking object: " + targetObject_.name);
 								transform.position = Vector3.Lerp (transform.position, target_position, cameraTrackSpeed_);
 						}
 				}
