@@ -73,6 +73,13 @@ public class MinionStateMovementListener : MonoBehaviour
 		// handle the state change
 		void MinionStateHandler (MinionStateMachine.MinionState new_state)
 		{
+				// perform checks on state change, not continuously
+		switch (new_state) {
+				case MinionStateMachine.MinionState.jump:
+		// apply jump force
+						rigidbody2D.AddForce (new Vector2 (0, 100f));
+						break;
+				}
 				currState_ = new_state;
 		}
 }

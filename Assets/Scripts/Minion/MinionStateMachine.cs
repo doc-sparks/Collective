@@ -13,6 +13,8 @@ public class MinionStateMachine : MonoBehaviour
 				idle = 0,
 				left,
 				right,
+		jump,
+		falling,
 				killed,
 				resurrect
 		}
@@ -78,6 +80,13 @@ public class MinionStateMachine : MonoBehaviour
 
 				case MinionState.resurrect:
 						return "Resurrect";
+
+		case MinionState.jump:
+			return "Jump";
+
+		case MinionState.falling:
+			return "Falling";
+
 				}	
 
 				return "Unknown";
@@ -101,10 +110,31 @@ public class MinionStateMachine : MonoBehaviour
 						}
 						break;
 
+		case MinionState.jump:
+			if ((old_state == MinionState.idle) ||
+			    (old_state == MinionState.left) || 
+			    (old_state == MinionState.right)) {
+				flag = true;
+			}
+			
+			break;
+
+		case MinionState.falling:
+			if ((old_state == MinionState.idle) ||
+			    (old_state == MinionState.left) || 
+			    (old_state == MinionState.right) || 
+			    (old_state == MinionState.jump)) {
+				flag = true;
+			}
+			
+			break;
+
 				case MinionState.killed:
 						if ((old_state == MinionState.idle) ||
 								(old_state == MinionState.left) || 
-								(old_state == MinionState.right)) {
+			    (old_state == MinionState.right) || 
+			    (old_state == MinionState.jump) || 
+								(old_state == MinionState.falling)) {
 								flag = true;
 						}
 

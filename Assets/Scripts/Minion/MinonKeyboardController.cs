@@ -45,5 +45,11 @@ public class MinonKeyboardController : MonoBehaviour
 
 				// store previous move
 				lastMove_ = hz;
+
+				// Sort out jumping
+		float jump = Input.GetAxis ("Jump");
+		if (jump > 0.0f) {
+						minionStateMachine_.changeState (MinionStateMachine.MinionState.jump);
+				}
 		}
 }
