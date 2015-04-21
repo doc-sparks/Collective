@@ -77,7 +77,7 @@ public class MinionStateMovementListener : MonoBehaviour
 		switch (new_state) {
 				case MinionStateMachine.MinionState.jump:
 		// apply jump force
-						rigidbody2D.AddForce (new Vector2 (0, 100f));
+						GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, 100f));
 						break;
 				}
 				currState_ = new_state;

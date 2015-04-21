@@ -30,7 +30,7 @@ public class MinionStateLifeListener : MonoBehaviour
 						// reset position and go to idle
 						transform.position = new Vector3 (0, 0, 0);
 						transform.rotation = Quaternion.identity;
-			rigidbody2D.velocity = Vector2.zero;
+			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 						minionStateMachine_.changeState (MinionStateMachine.MinionState.idle);
 						break;
 				}

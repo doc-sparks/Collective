@@ -19,7 +19,7 @@ public class MinionSceneryTriggerListener : MonoBehaviour
 		void LateUpdate ()
 		{
 			// check if we're falling
-			if (rigidbody2D.velocity.y != 0f)
+			if (GetComponent<Rigidbody2D>().velocity.y != 0f)
 		{
 			minionStateMachine_.changeState (MinionStateMachine.MinionState.falling);
 		}
