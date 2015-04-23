@@ -4,10 +4,13 @@ using System.Collections;
 public class MinionStateMovementListener : MonoBehaviour
 {
 
-	MinionStateMachine.MinionState currState_;
+
 	public float moveSpeed_ = 1f;
+	public float minionJumpVerticalForce_ = 200f;
+	public float minionJumpHorizontalForce_ = 100f;
 	private Animator minionAnimator_;
 	private MinionStateMachine minionStateMachine_;
+	private MinionStateMachine.MinionState currState_;
 
 	// Use this for initialization
 	void Start ()
@@ -49,10 +52,10 @@ public class MinionStateMovementListener : MonoBehaviour
 			break;
 
 		case MinionStateMachine.MinionState.right:
-						// move the minion
+			// move the minion
 			transform.Translate (new Vector3 (moveSpeed_ * Time.deltaTime, 0f, 0f));
-			
-						//Change the animation and point in the right direction
+
+			//Change the animation and point in the right direction
 			minionAnimator_.SetBool ("Walking", true);
 			if (transform.localScale.x < 0f) {
 				Vector3 local_scale = transform.localScale;
@@ -87,8 +90,18 @@ public class MinionStateMovementListener : MonoBehaviour
 		// perform checks on state change, not continuously
 		switch (new_state) {
 		case MinionStateMachine.MinionState.jump:
-		// apply jump force
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, 100f));
+		
+			// apply jump force
+			float fx = 0f;
+			float fy = minionJumpVerticalForce_;
+
+			if (currState_ == MinionStateMachine.MinionState.left) {
+				fx = -minionJumpHorizontalForce_;
+			} else if (currState_ == MinionStateMachine.MinionState.right) {
+				fx = minionJumpHorizontalForce_;
+			}
+
+			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (fx, fy));
 			break;
 
 		case MinionStateMachine.MinionState.falling:
