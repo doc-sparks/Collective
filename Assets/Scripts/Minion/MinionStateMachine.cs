@@ -111,8 +111,17 @@ public class MinionStateMachine : MonoBehaviour
 			break;
 
 		case MinionState.left:
+			if ((old_state == MinionState.idle) ||
+			    (old_state == MinionState.right) || 
+			    (old_state == MinionState.landing)) {
+				flag = true;
+			}
+			break;
+
 		case MinionState.right:
-			if (old_state == MinionState.idle) {
+			if ((old_state == MinionState.idle) ||
+			    (old_state == MinionState.left) || 
+				(old_state == MinionState.landing)) {
 				flag = true;
 			}
 			break;

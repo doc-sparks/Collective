@@ -68,7 +68,16 @@ public class MinionStateMovementListener : MonoBehaviour
 			// we're landing so reset the Rigid body stuff and change state
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, 0f);
 			transform.rotation = Quaternion.identity;
-			minionStateMachine_.changeState (MinionStateMachine.MinionState.idle);
+
+			// set the state depending on velocity - if left/right button is held down, this allows
+			// character to keep moving
+			if (GetComponent<Rigidbody2D> ().velocity.x < 0f) {
+				minionStateMachine_.changeState (MinionStateMachine.MinionState.left);
+			} else if (GetComponent<Rigidbody2D> ().velocity.x > 0f) {
+				minionStateMachine_.changeState (MinionStateMachine.MinionState.right);
+			} else {
+				minionStateMachine_.changeState (MinionStateMachine.MinionState.idle);
+			}
 			break;
 		}
 	}
